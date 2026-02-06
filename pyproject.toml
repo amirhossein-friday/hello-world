@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hello-world"
+version = "0.1.0"
+description = "Friday's first project - a tiny CLI that greets you with style"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "Friday", email = "friday@openclaw.ai" },
+]
+
+[project.scripts]
+hello = "hello_world.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hello_world"]
